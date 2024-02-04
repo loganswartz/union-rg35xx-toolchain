@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILDROOT_VERSION=2017.11
+BUILDROOT_VERSION=2023.02.9
 
 set -xe
 
@@ -27,7 +27,7 @@ done
 
 cd ~/buildroot
 # patches for buildroot itself
-patch -p1 < ~/toolchain-expose-BR2_TOOLCHAIN_EXTRA_EXTERNAL_LIBS-for-all-toolchain-types-2017.11.1.diff
+# patch -p1 < ~/toolchain-expose-BR2_TOOLCHAIN_EXTRA_EXTERNAL_LIBS-for-all-toolchain-types-2017.11.1.diff
 
 cp ~/rg35xx-buildroot-$BUILDROOT_VERSION.config ./.config
 if [ -f ~/rg35xx-toolchain.tar.xz ]; then
